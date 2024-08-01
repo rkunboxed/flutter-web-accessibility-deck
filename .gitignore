@@ -1,0 +1,5 @@
+.vscode/
+.dart_tool/
+.DS_Store
+*.DS_Store
+*_scratch*
