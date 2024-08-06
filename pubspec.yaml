@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_deck: ^0.15.0
+  flutter_deck_web_client: any
 
 dev_dependencies:
   flutter_test:
@@ -17,5 +18,6 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
-
   uses-material-design: true
+  assets:
+    - assets/

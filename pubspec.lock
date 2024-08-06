@@ -78,6 +78,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.1"
+  flutter_deck_web_client:
+    dependency: "direct main"
+    description:
+      name: flutter_deck_web_client
+      sha256: "3e46560f6c11aa1093e01879f2fb921b2ea1caf416289e2296796bf192706adb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   flutter_highlight:
     dependency: transitive
     description:
