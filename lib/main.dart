@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
-import 'package:flutter_web_accessibility_challenges/slides/title_slide.dart';
-import 'package:flutter_web_accessibility_challenges/slides/lesson_plan_slide.dart';
+import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
+import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
+import 'package:flutter_web_accessibility_challenges/slides/title.dart';
+import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
+import 'package:flutter_web_accessibility_challenges/slides/where_to_start.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,8 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         // Set defaults for the footer.
         footer: const FlutterDeckFooterConfiguration(
-          showSlideNumbers: true,
-          showSocialHandle: true,
+          showFooter: false,
         ),
         // Set defaults for the header.
         header: const FlutterDeckHeaderConfiguration(
@@ -112,6 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
       slides: const [
         TitleSlide(),
         TocSlide(),
+        WhereToStartSlide(),
+        DebuggerSlide(),
+        ChromeDevToolsSlide(),
         // LayoutStructureSlide(),
         // BlankSlide(),
         // SplitSlide(),
