@@ -6,11 +6,12 @@ const _speakerNotes = '''
 - The remaining space is free for your imagination.
 ''';
 
-class ChromeDevToolsSlide extends FlutterDeckSlideWidget {
-  const ChromeDevToolsSlide()
+class LighthouseResultsSlide extends FlutterDeckSlideWidget {
+  const LighthouseResultsSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/chrome-dev-tools',
+            route: '/lighthouse-audit-report',
+            title: 'Lighthouse Results',
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
           ),
@@ -20,10 +21,10 @@ class ChromeDevToolsSlide extends FlutterDeckSlideWidget {
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.image(
       headerBuilder: (context) {
-        return Text('Chrome DevTools');
+        return Text('Lighthouse Audit Results');
       },
       imageBuilder: (context) {
-        return Image.asset('assets/dev_tools_before.png', width: 1600);
+        return Image.asset('assets/lighthouse_report.png', width: 1600);
       },
     );
   }

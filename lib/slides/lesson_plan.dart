@@ -11,6 +11,7 @@ class TocSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/toc',
+            title: 'Lesson Plan',
             steps: 3,
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),

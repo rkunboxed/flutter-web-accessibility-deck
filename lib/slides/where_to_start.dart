@@ -11,7 +11,8 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
       : super(
           configuration: const FlutterDeckSlideConfiguration(
             route: '/where-to-start',
-            steps: 3,
+            title: 'Where to Start',
+            steps: 5,
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
           ),
@@ -26,7 +27,7 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'WHERE TO START:',
+              'WHERE DO I START?',
               style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 25),
@@ -35,9 +36,11 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
               child: FlutterDeckBulletList(
                 useSteps: true,
                 items: const [
-                  'Keyboard accessibility - Can someone get around and interact with the site with just a keyboard?',
-                  'Text scaling - Is the site still useable if someone has text scaling turned all the way up?',
-                  'Screen reader - Can someone using a screen reader to get around and interact with the site?',
+                  'Handles text scaling',
+                  'Tappable target size',
+                  'Sufficient contrast ratios',
+                  'Keyboard accessibility',
+                  'Screen reader accessibiity',
                 ],
               ),
             ),

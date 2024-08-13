@@ -3,8 +3,11 @@ import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
+import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
+import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
+import 'package:flutter_web_accessibility_challenges/slides/title_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/where_to_start.dart';
 
 void main() {
@@ -19,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -42,6 +46,34 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return FlutterDeckApp(
       client: FlutterDeckWebClient(),
+      // Presentation is build automatically from the list of slides.
+      slides: const [
+        TitleSlide(),
+        TocSlide(),
+        WhereToStartSlide(),
+        TitleDevToolsSlide(),
+        LighthouseSlide(),
+        LighthouseResultsSlide(),
+        DebuggerSlide(),
+        ChromeDevToolsSlide(),
+        // LayoutStructureSlide(),
+        // BlankSlide(),
+        // SplitSlide(),
+        // ImageSlide(),
+        // BigFactSlide(),
+        // QuoteSlide(),
+        // FooterSlide(),
+        // HiddenSlide(),
+        // DrawerSlide(),
+        // MarkerSlide(),
+        // ThemingSlide(),
+        // BackgroundSlide(),
+        // LocalizationSlide(),
+        // TransitionsSlide(),
+        // StepsSlide(),
+        // CodeHighlightSlide(),
+        // EndSlide(),
+      ],
       // You could use the default configuration or create your own.
       configuration: FlutterDeckConfiguration(
         // Define a global background for the light and dark themes separately.
@@ -110,31 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
           useMaterial3: true,
         ),
       ),
-      // Presentation is build automatically from the list of slides.
-      slides: const [
-        TitleSlide(),
-        TocSlide(),
-        WhereToStartSlide(),
-        DebuggerSlide(),
-        ChromeDevToolsSlide(),
-        // LayoutStructureSlide(),
-        // BlankSlide(),
-        // SplitSlide(),
-        // ImageSlide(),
-        // BigFactSlide(),
-        // QuoteSlide(),
-        // FooterSlide(),
-        // HiddenSlide(),
-        // DrawerSlide(),
-        // MarkerSlide(),
-        // ThemingSlide(),
-        // BackgroundSlide(),
-        // LocalizationSlide(),
-        // TransitionsSlide(),
-        // StepsSlide(),
-        // CodeHighlightSlide(),
-        // EndSlide(),
-      ],
+
       // Do not forget to introduce yourself!
       speakerInfo: const FlutterDeckSpeakerInfo(
         name: 'Rona Kilmer',
