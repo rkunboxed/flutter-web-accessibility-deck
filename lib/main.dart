@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
+import 'package:flutter_web_accessibility_challenges/slides/accessibility_tree.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
+import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools_after.dart';
 import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
+import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
@@ -12,30 +15,29 @@ import 'package:flutter_web_accessibility_challenges/slides/where_to_start.dart'
 
 void main() {
   runApp(const MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized().ensureSemantics();
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Accessibility for Flutter Web Apps',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -46,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return FlutterDeckApp(
       client: FlutterDeckWebClient(),
-      // Presentation is build automatically from the list of slides.
       slides: const [
         TitleSlide(),
         TocSlide(),
@@ -56,6 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
         LighthouseResultsSlide(),
         DebuggerSlide(),
         ChromeDevToolsSlide(),
+        ChromeDevToolsAfterSlide(),
+        EnsureSemanticsSlide(),
+        AccessibilityTreeSlide(),
+        //AriaSlide(),
+
         // LayoutStructureSlide(),
         // BlankSlide(),
         // SplitSlide(),

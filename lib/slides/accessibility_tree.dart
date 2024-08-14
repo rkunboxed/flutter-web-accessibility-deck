@@ -6,12 +6,12 @@ const _speakerNotes = '''
 - The remaining space is free for your imagination.
 ''';
 
-class ChromeDevToolsSlide extends FlutterDeckSlideWidget {
-  const ChromeDevToolsSlide()
+class AccessibilityTreeSlide extends FlutterDeckSlideWidget {
+  const AccessibilityTreeSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/chrome-dev-tools',
-            title: 'Chrome DevTools',
+            route: '/accessibility-tree',
+            title: 'Accessibility Tree',
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
           ),
@@ -21,7 +21,7 @@ class ChromeDevToolsSlide extends FlutterDeckSlideWidget {
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.image(
       imageBuilder: (context) {
-        return Image.asset('assets/dev_tools_before.png', width: 1600);
+        return Image.asset('assets/dev_tools_tree.png', width: 1600);
       },
     );
   }
