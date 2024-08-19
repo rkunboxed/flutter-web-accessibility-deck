@@ -8,10 +8,14 @@ import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
 import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
+import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
+import 'package:flutter_web_accessibility_challenges/slides/title_challenges.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_dev_tools.dart';
+import 'package:flutter_web_accessibility_challenges/slides/title_tips.dart';
 import 'package:flutter_web_accessibility_challenges/slides/where_to_start.dart';
+import 'package:flutter_web_accessibility_challenges/slides/window_title.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,7 +64,19 @@ class _MyHomePageState extends State<MyHomePage> {
         ChromeDevToolsAfterSlide(),
         EnsureSemanticsSlide(),
         AccessibilityTreeSlide(),
-        //AriaSlide(),
+        //AriaSlide(), //can probably just speak to this
+        TitleQuickTipsSlide(),
+        MediaQuerySlide(),
+        WindowTitleSlide(),
+        //AnimatedOpacitySlide(),
+        //SemanticsAnnounceSlide(),
+        TitleChallengesSlide(),
+        //DialogSlide(),
+        //DropdownSlide(),
+        //FocusEqualitySlide(),
+        //ScopesRouteSlide(),
+        //HiddenButtonSlide(), // need to do a bit more research here, can sort order help?XXXXX
+        //ThankYouSlide()
 
         // LayoutStructureSlide(),
         // BlankSlide(),
