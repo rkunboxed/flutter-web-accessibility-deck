@@ -21,7 +21,7 @@ class LighthouseSlide extends FlutterDeckSlideWidget {
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.image(
       headerBuilder: (context) {
-        return Text('Lighthouse Audit');
+        return const Text('Lighthouse Audit');
       },
       imageBuilder: (context) {
         return Image.asset('assets/lighthouse_audit.png', width: 1600);

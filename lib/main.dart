@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
 import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
 import 'package:flutter_web_accessibility_challenges/slides/accessibility_tree.dart';
+import 'package:flutter_web_accessibility_challenges/slides/animated_opacity.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools_after.dart';
 import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dar
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
+import 'package:flutter_web_accessibility_challenges/slides/semantics_announce.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_challenges.dart';
@@ -68,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
         TitleQuickTipsSlide(),
         MediaQuerySlide(),
         WindowTitleSlide(),
-        //AnimatedOpacitySlide(),
-        //SemanticsAnnounceSlide(),
+        AnimatedOpacitySlide(),
+        SemanticsAnnounceSlide(),
         TitleChallengesSlide(),
         //DialogSlide(),
         //DropdownSlide(),

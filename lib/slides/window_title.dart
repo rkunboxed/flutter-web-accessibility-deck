@@ -25,10 +25,10 @@ class WindowTitleSlide extends FlutterDeckSlideWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image.asset('assets/window_title.png', height: 500),
+              Image.asset('assets/window_title.png', height: 640),
               FlutterDeckCodeHighlightTheme(
                 data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
-                  textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 32, height: 1.4),
+                  textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
                 ),
                 child: const FlutterDeckCodeHighlight(
                   code: '''

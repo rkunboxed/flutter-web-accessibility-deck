@@ -35,7 +35,7 @@ class MediaQuerySlide extends FlutterDeckSlideWidget {
                 ),
                 child: const FlutterDeckCodeHighlight(
                   code: '''
-MediaQuery.of(context).accessibleNavigation
+  MediaQuery.of(context).accessibleNavigation
 ''',
                   language: 'dart',
                 ),

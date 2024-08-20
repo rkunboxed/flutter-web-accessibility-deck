@@ -31,16 +31,16 @@ class DebuggerSlide extends FlutterDeckSlideWidget {
             ),
             child: const FlutterDeckCodeHighlight(
               code: '''
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      showSemanticsDebugger: true,
-    );
+    @override
+    Widget build(BuildContext context) {
+      return const MaterialApp(
+        showSemanticsDebugger: true,
+      );
+    }
   }
-}
 ''',
               language: 'dart',
             ),
