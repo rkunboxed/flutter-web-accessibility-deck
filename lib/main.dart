@@ -9,9 +9,11 @@ import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
 import 'package:flutter_web_accessibility_challenges/slides/dialog_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/dropdown_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dart';
+import 'package:flutter_web_accessibility_challenges/slides/focus_equality.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
+import 'package:flutter_web_accessibility_challenges/slides/scopes_route.dart';
 import 'package:flutter_web_accessibility_challenges/slides/semantics_announce.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
@@ -77,30 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
         TitleChallengesSlide(),
         DialogBugSlide(),
         DropdownBugSlide(),
-        //FocusEqualitySlide(),
-        //ScopesRouteSlide(),
-        //HiddenButtonSlide(), // need to do a bit more research here, can sort order help?XXXXX
+        FocusEqualitySlide(),
+        ScopesRouteSlide(),
+        //HiddenButtonSlide(), // need to do a bit more research here, so hacky
         //ThankYouSlide()
-
-        // LayoutStructureSlide(),
-        // BlankSlide(),
-        // SplitSlide(),
-        // ImageSlide(),
-        // BigFactSlide(),
-        // QuoteSlide(),
-        // FooterSlide(),
-        // HiddenSlide(),
-        // DrawerSlide(),
-        // MarkerSlide(),
-        // ThemingSlide(),
-        // BackgroundSlide(),
-        // LocalizationSlide(),
-        // TransitionsSlide(),
-        // StepsSlide(),
-        // CodeHighlightSlide(),
-        // EndSlide(),
       ],
-      // You could use the default configuration or create your own.
       configuration: FlutterDeckConfiguration(
         // Define a global background for the light and dark themes separately.
         background: const FlutterDeckBackgroundConfiguration(
