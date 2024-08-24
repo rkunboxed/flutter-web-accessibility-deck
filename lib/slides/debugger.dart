@@ -25,25 +25,32 @@ class DebuggerSlide extends FlutterDeckSlideWidget {
       },
       leftBuilder: (context) {
         return Center(
-          child: FlutterDeckCodeHighlightTheme(
-            data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
-              textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 32, height: 1.4),
-            ),
-            child: const FlutterDeckCodeHighlight(
-              code: '''
-  class MyApp extends StatelessWidget {
-    const MyApp({super.key});
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Semantics Debugger', style: FlutterDeckTheme.of(context).textTheme.header),
+              const SizedBox(height: 60),
+              FlutterDeckCodeHighlightTheme(
+                data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
+                  textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
+                ),
+                child: const FlutterDeckCodeHighlight(
+                  code: '''
+  class MyApp extends StatelessWidget { 
+      const MyApp({super.key});
 
-    @override
-    Widget build(BuildContext context) {
-      return const MaterialApp(
-        showSemanticsDebugger: true,
-      );
-    }
+      @override
+      Widget build(BuildContext context) {  
+          return const MaterialApp(
+              showSemanticsDebugger: true,
+          );
+      }
   }
 ''',
-              language: 'dart',
-            ),
+                  language: 'dart',
+                ),
+              ),
+            ],
           ),
         );
       },

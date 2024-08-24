@@ -7,12 +7,12 @@ const _speakerNotes = '''
 - The remaining space is free for your imagination.
 ''';
 
-class MediaQuerySlide extends FlutterDeckSlideWidget {
-  const MediaQuerySlide()
+class DropdownBugSlide extends FlutterDeckSlideWidget {
+  const DropdownBugSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/media-query',
-            title: 'What about MediaQuery?',
+            route: '/dropdown-bug',
+            title: 'Dropdown Bug',
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: true),
           ),
@@ -20,38 +20,28 @@ class MediaQuerySlide extends FlutterDeckSlideWidget {
 
   @override
   FlutterDeckSlide build(BuildContext context) {
-    return FlutterDeckSlide.blank(
-      builder: (context) {
+    return FlutterDeckSlide.split(
+      rightBuilder: (context) {
+        return Image.asset('assets/dropdown.png');
+      },
+      leftBuilder: (context) {
         return Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Forget about accessibleNavigation from MediaQuery',
-                  style: FlutterDeckTheme.of(context).textTheme.bodyLarge),
-              const SizedBox(height: 40),
-              FlutterDeckCodeHighlightTheme(
-                data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
-                  textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
-                ),
-                child: const FlutterDeckCodeHighlight(
-                  code: '''
-  MediaQuery.of(context).accessibleNavigation ''',
-                  language: 'dart',
-                ),
-              ),
+              Text('DropdownMenu Bug', style: FlutterDeckTheme.of(context).textTheme.header),
               const SizedBox(height: 60),
-              Text(
-                'Because of this',
-                style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
-              ),
-              const SizedBox(height: 40),
               FlutterDeckCodeHighlightTheme(
                 data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
                   textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
                 ),
                 child: const FlutterDeckCodeHighlight(
                   code: '''
-  WidgetsFlutterBinding.ensureInitialized().ensureSemantics();  ''',
+  DropdownMenu(
+    label: const Text('Select one'),
+    dropdownMenuEntries: [...],
+  );
+''',
                   language: 'dart',
                 ),
               ),
@@ -62,12 +52,12 @@ class MediaQuerySlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/67571'));
+            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/143848'));
           },
           child: const Padding(
             padding: EdgeInsets.all(16),
             child: Text(
-              'https://github.com/flutter/flutter/issues/67571',
+              'https://github.com/flutter/flutter/issues/143848',
               style: TextStyle(fontSize: 20),
             ),
           ),

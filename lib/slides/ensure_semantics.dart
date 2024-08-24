@@ -30,9 +30,9 @@ class EnsureSemanticsSlide extends FlutterDeckSlideWidget {
             child: const FlutterDeckCodeHighlight(
               code: '''
   void main() {
-    runApp(const MyApp());
+      runApp(const MyApp());
 
-    WidgetsFlutterBinding.ensureInitialized().ensureSemantics();
+      WidgetsFlutterBinding.ensureInitialized().ensureSemantics();  
   }
 ''',
               language: 'dart',

@@ -12,7 +12,7 @@ class TocSlide extends FlutterDeckSlideWidget {
           configuration: const FlutterDeckSlideConfiguration(
             route: '/toc',
             title: 'Lesson Plan',
-            steps: 3,
+            steps: 4,
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
           ),
@@ -38,6 +38,7 @@ class TocSlide extends FlutterDeckSlideWidget {
                 items: const [
                   'How accessibility for Flutter on the web is unique',
                   'Tools for debugging on the web',
+                  'Quick tips to save you time',
                   'Specific challenges and solutions',
                 ],
               ),

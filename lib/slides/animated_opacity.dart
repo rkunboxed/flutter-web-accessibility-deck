@@ -29,10 +29,10 @@ class AnimatedOpacitySlide extends FlutterDeckSlideWidget {
             child: const FlutterDeckCodeHighlight(
               code: '''
   AnimatedOpacity(
-    alwaysIncludeSemantics: true,
-    opacity: _showGreeting ? 1 : 0,
-    duration: const Duration(milliseconds: 500),
-    child: const Text('Good Afternoon!'),
+      alwaysIncludeSemantics: true,
+      opacity: _isVisible ? 1 : 0,
+      duration: const Duration(milliseconds: 500),    
+      child: const Text('Good Afternoon!'),
   );
 ''',
               language: 'dart',

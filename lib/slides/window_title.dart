@@ -22,30 +22,36 @@ class WindowTitleSlide extends FlutterDeckSlideWidget {
     return FlutterDeckSlide.blank(
       builder: (context) {
         return Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/window_title.png', height: 640),
-              FlutterDeckCodeHighlightTheme(
-                data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
-                  textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
-                ),
-                child: const FlutterDeckCodeHighlight(
-                  code: '''
+              Text('Window Title', style: FlutterDeckTheme.of(context).textTheme.header),
+              const SizedBox(height: 60),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Image.asset('assets/window_title.png', height: 640),
+                  FlutterDeckCodeHighlightTheme(
+                    data: FlutterDeckCodeHighlightTheme.of(context).copyWith(
+                      textStyle: FlutterDeckTheme.of(context).textTheme.bodyLarge.copyWith(fontSize: 42, height: 1.4),
+                    ),
+                    child: const FlutterDeckCodeHighlight(
+                      code: '''
   MaterialApp(
-    title: 'browser window title',
-    home: MyHomePage(),
+      title: 'browser window title',    
+      home: MyHomePage(),
   );
-            
+                  
   Title(
-    color: Colors.black,
-    title: 'hello world',
-    child: ...
-  );
-''',
-                  language: 'dart',
-                ),
-              )
+      color: Colors.black,
+      title: 'hello world',
+      child: ...
+  );''',
+                      language: 'dart',
+                    ),
+                  )
+                ],
+              ),
             ],
           ),
         );

@@ -6,6 +6,8 @@ import 'package:flutter_web_accessibility_challenges/slides/animated_opacity.dar
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools_after.dart';
 import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
+import 'package:flutter_web_accessibility_challenges/slides/dialog_bug.dart';
+import 'package:flutter_web_accessibility_challenges/slides/dropdown_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
@@ -22,7 +24,7 @@ import 'package:flutter_web_accessibility_challenges/slides/window_title.dart';
 void main() {
   runApp(const MyApp());
 
-  WidgetsFlutterBinding.ensureInitialized().ensureSemantics();
+  //WidgetsFlutterBinding.ensureInitialized().ensureSemantics();
 }
 
 class MyApp extends StatelessWidget {
@@ -53,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return FlutterDeckApp(
-      client: FlutterDeckWebClient(),
+      //client: FlutterDeckWebClient(),
       slides: const [
         TitleSlide(),
         TocSlide(),
@@ -73,8 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
         AnimatedOpacitySlide(),
         SemanticsAnnounceSlide(),
         TitleChallengesSlide(),
-        //DialogSlide(),
-        //DropdownSlide(),
+        DialogBugSlide(),
+        DropdownBugSlide(),
         //FocusEqualitySlide(),
         //ScopesRouteSlide(),
         //HiddenButtonSlide(), // need to do a bit more research here, can sort order help?XXXXX
