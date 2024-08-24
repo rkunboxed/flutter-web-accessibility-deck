@@ -15,6 +15,7 @@ import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.d
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
 import 'package:flutter_web_accessibility_challenges/slides/scopes_route.dart';
 import 'package:flutter_web_accessibility_challenges/slides/semantics_announce.dart';
+import 'package:flutter_web_accessibility_challenges/slides/thank_you.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_challenges.dart';
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         FocusEqualitySlide(),
         ScopesRouteSlide(),
         //HiddenButtonSlide(), // need to do a bit more research here, so hacky
-        //ThankYouSlide()
+        ThankYouSlide()
       ],
       configuration: FlutterDeckConfiguration(
         // Define a global background for the light and dark themes separately.
