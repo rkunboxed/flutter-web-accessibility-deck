@@ -15,6 +15,7 @@ import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.d
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
 import 'package:flutter_web_accessibility_challenges/slides/scopes_route.dart';
 import 'package:flutter_web_accessibility_challenges/slides/semantics_announce.dart';
+import 'package:flutter_web_accessibility_challenges/slides/textfield_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/thank_you.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
@@ -78,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         AnimatedOpacitySlide(),
         SemanticsAnnounceSlide(),
         TitleChallengesSlide(),
+        TextFieldBugSlide(),
         DialogBugSlide(),
         DropdownBugSlide(),
         FocusEqualitySlide(),

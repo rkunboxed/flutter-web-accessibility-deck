@@ -12,6 +12,7 @@ dependencies:
   flutter_deck: ^0.15.0
   flutter_deck_web_client: any
   url_launcher: ^6.3.0
+  video_player: ^2.9.1
 
 dev_dependencies:
   flutter_test:
