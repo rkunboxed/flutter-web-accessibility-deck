@@ -46,11 +46,10 @@ class TocSlide extends FlutterDeckSlideWidget {
           ],
         ),
       ),
-      //TODO add image
       rightBuilder: (context) => Center(
-        child: Text(
-          'ADD IMAGE',
-          style: FlutterDeckTheme.of(context).textTheme.bodyMedium,
+        child: Image.asset(
+          'assets/alice_chess.jpg',
+          width: 800,
         ),
       ),
     );

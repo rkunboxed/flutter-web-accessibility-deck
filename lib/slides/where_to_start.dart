@@ -47,11 +47,10 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
           ],
         ),
       ),
-      //TODO add image
       rightBuilder: (context) => Center(
-        child: Text(
-          'ADD IMAGE',
-          style: FlutterDeckTheme.of(context).textTheme.bodyMedium,
+        child: Image.asset(
+          'assets/alice_door.jpg',
+          width: 800,
         ),
       ),
     );
