@@ -21,6 +21,11 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
   @override
   FlutterDeckSlide build(BuildContext context) {
     return FlutterDeckSlide.split(
+      theme: FlutterDeckTheme.of(context).copyWith(
+        splitSlideTheme: const FlutterDeckSplitSlideThemeData(
+          rightBackgroundColor: Colors.black,
+        ),
+      ),
       leftBuilder: (context) => Padding(
         padding: const EdgeInsets.all(35),
         child: Column(
@@ -28,7 +33,12 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
           children: [
             Text(
               'WHERE DO I START?',
-              style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+              style: FlutterDeckTheme.of(context).textTheme.title,
+            ),
+            const SizedBox(height: 50),
+            Text(
+              'Ensure your app:',
+              style: FlutterDeckTheme.of(context).textTheme.title,
             ),
             const SizedBox(height: 25),
             SizedBox(
@@ -37,21 +47,19 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
                 useSteps: true,
                 items: const [
                   'Handles text scaling',
-                  'Tappable target size',
-                  'Sufficient contrast ratios',
-                  'Keyboard accessibility',
-                  'Screen reader accessibiity',
+                  'Has tappable target sizes',
+                  'Uses sufficient contrast ratios',
+                  'Works with keyboard',
+                  'Works with screen reader',
                 ],
               ),
             ),
           ],
         ),
       ),
-      rightBuilder: (context) => Center(
-        child: Image.asset(
-          'assets/alice_door.jpg',
-          width: 800,
-        ),
+      rightBuilder: (context) => Align(
+        alignment: Alignment.topRight,
+        child: Image.asset('assets/alice_door.jpg'),
       ),
     );
   }

@@ -6,12 +6,12 @@ const _speakerNotes = '''
 - The remaining space is free for your imagination.
 ''';
 
-class TocSlide extends FlutterDeckSlideWidget {
-  const TocSlide()
+class LessonsLearnedSlide extends FlutterDeckSlideWidget {
+  const LessonsLearnedSlide()
       : super(
           configuration: const FlutterDeckSlideConfiguration(
-            route: '/toc',
-            title: 'Lesson Plan',
+            route: '/lessons-learned',
+            title: 'Lessons Learned',
             steps: 4,
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
@@ -32,7 +32,7 @@ class TocSlide extends FlutterDeckSlideWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'YOU WILL LEARN:',
+              'LESSONS LEARNED',
               style: FlutterDeckTheme.of(context).textTheme.title,
             ),
             const SizedBox(height: 25),
@@ -41,10 +41,14 @@ class TocSlide extends FlutterDeckSlideWidget {
               child: FlutterDeckBulletList(
                 useSteps: true,
                 items: const [
-                  'How accessibility for Flutter on the web is unique',
-                  'Tools for debugging on the web',
-                  'Quick tips to save you time',
-                  'Specific challenges and (some) solutions',
+                  'Consider accessibility as you build',
+                  // Much easier to consider semantics as you go rather than retrofit
+                  'Test widgets with ensureSemantics before committing',
+                  //check any premade widgets with ensureSemantics turned on before committing to using them
+                  'Test on touch devices and keyboard/mouse setups w/and w/out screen reader',
+                  //be sure to check on phones/touch devices as well as desktop w/and without screen reader
+                  'Flutter GitHub issues > StackOverflow',
+                  //if you run into a problem check flutter issues in GitHub check CLOSED issues as well
                 ],
               ),
             ),
@@ -53,7 +57,7 @@ class TocSlide extends FlutterDeckSlideWidget {
       ),
       rightBuilder: (context) => Align(
         alignment: Alignment.topRight,
-        child: Image.asset('assets/alice_chess.jpg'),
+        child: Image.asset('assets/alice_caterpillar.jpg'),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
-import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
 import 'package:flutter_web_accessibility_challenges/slides/accessibility_tree.dart';
 import 'package:flutter_web_accessibility_challenges/slides/animated_opacity.dart';
+import 'package:flutter_web_accessibility_challenges/slides/aria.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/chrome_dev_tools_after.dart';
 import 'package:flutter_web_accessibility_challenges/slides/debugger.dart';
@@ -10,6 +10,7 @@ import 'package:flutter_web_accessibility_challenges/slides/dialog_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/dropdown_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/ensure_semantics.dart';
 import 'package:flutter_web_accessibility_challenges/slides/focus_equality.dart';
+import 'package:flutter_web_accessibility_challenges/slides/lessons_learned.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
@@ -59,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return FlutterDeckApp(
-      //client: FlutterDeckWebClient(),
       slides: const [
         TitleSlide(),
         TocSlide(),
@@ -72,19 +72,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ChromeDevToolsAfterSlide(),
         EnsureSemanticsSlide(),
         AccessibilityTreeSlide(),
-        //AriaSlide(), //can probably just speak to this
+        AriaSlide(),
         TitleQuickTipsSlide(),
         MediaQuerySlide(),
         WindowTitleSlide(),
         AnimatedOpacitySlide(),
         SemanticsAnnounceSlide(),
         TitleChallengesSlide(),
-        TextFieldBugSlide(),
         DialogBugSlide(),
         DropdownBugSlide(),
         FocusEqualitySlide(),
         ScopesRouteSlide(),
-        //HiddenButtonSlide(), // need to do a bit more research here, so hacky
+        TextFieldBugSlide(),
+        LessonsLearnedSlide(),
+        //testing matrix?
         ThankYouSlide()
       ],
       configuration: FlutterDeckConfiguration(
@@ -162,9 +163,6 @@ class _MyHomePageState extends State<MyHomePage> {
         socialHandle: 'Twitter/X: @rkunboxed',
         imagePath: 'assets/flutter_logo.png',
       ),
-      locale: const Locale('en'),
-      // localizationsDelegates: AppLocalizations.localizationsDelegates,
-      // supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }
