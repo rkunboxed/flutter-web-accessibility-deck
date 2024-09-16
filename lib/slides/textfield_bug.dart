@@ -54,7 +54,9 @@ class TextFieldBugSlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/141975'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/141975'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

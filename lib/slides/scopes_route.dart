@@ -43,7 +43,9 @@ class ScopesRouteSlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/53702'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/53702'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

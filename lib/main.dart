@@ -82,10 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
         DialogBugSlide(),
         DropdownBugSlide(),
         FocusEqualitySlide(),
-        ScopesRouteSlide(),
+        //ScopesRouteSlide(),
         TextFieldBugSlide(),
         LessonsLearnedSlide(),
-        //testing matrix?
         ThankYouSlide()
       ],
       configuration: FlutterDeckConfiguration(

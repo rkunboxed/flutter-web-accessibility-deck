@@ -52,7 +52,9 @@ class DropdownBugSlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/143848'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/143848'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

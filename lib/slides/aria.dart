@@ -124,7 +124,9 @@ class AriaSlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://developer.mozilla.org/en-US/docs/Web/Accessibility'));
+            launchUrl(
+              Uri.https('developer.mozilla.org', '/en-US/docs/Web/Accessibility'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

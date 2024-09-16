@@ -43,7 +43,9 @@ class EnsureSemanticsSlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/115158'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/115158'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

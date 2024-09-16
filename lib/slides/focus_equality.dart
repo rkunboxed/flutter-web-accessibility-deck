@@ -39,7 +39,9 @@ class FocusEqualitySlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/83809'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/83809'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),

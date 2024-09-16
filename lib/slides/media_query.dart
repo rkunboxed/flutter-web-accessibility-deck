@@ -62,7 +62,9 @@ class MediaQuerySlide extends FlutterDeckSlideWidget {
       footerBuilder: (context) {
         return InkWell(
           onTap: () {
-            launchUrl(Uri.dataFromString('https://github.com/flutter/flutter/issues/67571'));
+            launchUrl(
+              Uri.https('github.com', '/flutter/flutter/issues/67571'),
+            );
           },
           child: const Padding(
             padding: EdgeInsets.all(16),
