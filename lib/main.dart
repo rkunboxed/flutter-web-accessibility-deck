@@ -14,7 +14,6 @@ import 'package:flutter_web_accessibility_challenges/slides/lessons_learned.dart
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse.dart';
 import 'package:flutter_web_accessibility_challenges/slides/lighthouse_results.dart';
 import 'package:flutter_web_accessibility_challenges/slides/media_query.dart';
-import 'package:flutter_web_accessibility_challenges/slides/scopes_route.dart';
 import 'package:flutter_web_accessibility_challenges/slides/semantics_announce.dart';
 import 'package:flutter_web_accessibility_challenges/slides/textfield_bug.dart';
 import 'package:flutter_web_accessibility_challenges/slides/thank_you.dart';
@@ -23,13 +22,12 @@ import 'package:flutter_web_accessibility_challenges/slides/lesson_plan.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_challenges.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_dev_tools.dart';
 import 'package:flutter_web_accessibility_challenges/slides/title_tips.dart';
+import 'package:flutter_web_accessibility_challenges/slides/tweedledeedum.dart';
 import 'package:flutter_web_accessibility_challenges/slides/where_to_start.dart';
 import 'package:flutter_web_accessibility_challenges/slides/window_title.dart';
 
 void main() {
   runApp(const MyApp());
-
-  //WidgetsFlutterBinding.ensureInitialized().ensureSemantics();
 }
 
 class MyApp extends StatelessWidget {
@@ -82,13 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
         DialogBugSlide(),
         DropdownBugSlide(),
         FocusEqualitySlide(),
-        //ScopesRouteSlide(),
         TextFieldBugSlide(),
         LessonsLearnedSlide(),
+        TweedledeedumSlide(),
         ThankYouSlide()
       ],
       configuration: FlutterDeckConfiguration(
-        // Define a global background for the light and dark themes separately.
         background: const FlutterDeckBackgroundConfiguration(
           light: FlutterDeckBackground.gradient(
             LinearGradient(
@@ -105,20 +102,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        // Set defaults for the footer.
         footer: const FlutterDeckFooterConfiguration(
           showFooter: false,
         ),
-        // Set defaults for the header.
         header: const FlutterDeckHeaderConfiguration(
           showHeader: false,
         ),
-        // Override the default marker configuration.
         marker: const FlutterDeckMarkerConfiguration(
           color: Colors.cyan,
           strokeWidth: 8.0,
         ),
-        // Show progress indicator with specifc gradient and background color.
         progressIndicator: const FlutterDeckProgressIndicator.gradient(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -127,15 +120,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           backgroundColor: Colors.black,
         ),
-        // Use a custom slide size.
         slideSize: FlutterDeckSlideSize.fromAspectRatio(
           aspectRatio: const FlutterDeckAspectRatio.ratio16x9(),
           resolution: const FlutterDeckResolution.fhd(),
         ),
-        // Use a custom transition between slides.
         transition: const FlutterDeckTransition.fade(),
       ),
-      // You can also define your own light...
       lightTheme: FlutterDeckThemeData.fromTheme(
         ThemeData.from(
           colorScheme: ColorScheme.fromSeed(
@@ -144,7 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
           useMaterial3: true,
         ),
       ),
-      // ...and dark themes.
       darkTheme: FlutterDeckThemeData.fromTheme(
         ThemeData.from(
           colorScheme: ColorScheme.fromSeed(
@@ -154,8 +143,6 @@ class _MyHomePageState extends State<MyHomePage> {
           useMaterial3: true,
         ),
       ),
-
-      // Do not forget to introduce yourself!
       speakerInfo: const FlutterDeckSpeakerInfo(
         name: 'Rona Kilmer',
         description: 'Senior Flutter Developer at Ardley',

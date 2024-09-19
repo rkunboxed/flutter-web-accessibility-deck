@@ -26,9 +26,79 @@ class ThankYouSlide extends FlutterDeckSlideWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/flutter_logo.png'),
+              Image.asset('assets/flutter_logo.png', width: 200),
               const SizedBox(height: 60),
               Text('THANK YOU', style: FlutterDeckTheme.of(context).textTheme.display),
+              const SizedBox(height: 60),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Demo App Repo',
+                        style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                      ),
+                      const SizedBox(height: 16),
+                      Image.asset('assets/bitly_demo_qr.jpeg', width: 300),
+                      const SizedBox(height: 10),
+                      InkWell(
+                        onTap: () {
+                          launchUrl(
+                            Uri.https('bit.ly', '/3zdRCI1'),
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Text(
+                            'https://bit.ly/3zdRCI1',
+                            style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(width: 80),
+                  Column(
+                    children: [
+                      Text(
+                        'Slides built with FlutterDeck',
+                        style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                      ),
+                      Text(
+                        'Alice in Wonderland images generated with ChatGPT',
+                        style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(width: 80),
+                  Column(
+                    children: [
+                      Text(
+                        'Slide Deck Repo',
+                        style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                      ),
+                      const SizedBox(height: 16),
+                      Image.asset('assets/bitly_deck_qr.jpeg', width: 300),
+                      const SizedBox(height: 10),
+                      InkWell(
+                        onTap: () {
+                          launchUrl(
+                            Uri.https('bit.ly', '/47wGhzi'),
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Text(
+                            'https://bit.ly/47wGhzi',
+                            style: FlutterDeckTheme.of(context).textTheme.bodyLarge,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         );
