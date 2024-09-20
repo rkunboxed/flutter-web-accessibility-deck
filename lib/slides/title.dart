@@ -59,7 +59,7 @@ class TitleSlide extends FlutterDeckSlideWidget {
                               style: FlutterDeckTheme.of(context).textTheme.header.copyWith(fontSize: 28),
                             ),
                             Text(
-                              'Twitter/X: @rkunboxed',
+                              '@rkunboxed',
                               style: FlutterDeckTheme.of(context).textTheme.header.copyWith(fontSize: 28),
                             ),
                           ],
