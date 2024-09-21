@@ -19,9 +19,22 @@ class ChromeDevToolsAfterSlide extends FlutterDeckSlideWidget {
 
   @override
   FlutterDeckSlide build(BuildContext context) {
-    return FlutterDeckSlide.image(
-      imageBuilder: (context) {
-        return Image.asset('assets/dev_tools_after.png', width: 1600);
+    return FlutterDeckSlide.blank(
+      builder: (context) {
+        return Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Screen readers must opt-in',
+                style: FlutterDeckTheme.of(context).textTheme.subtitle,
+              ),
+              const SizedBox(height: 20),
+              Image.asset('assets/dev_tools_after.png', width: 1450),
+            ],
+          ),
+        );
       },
     );
   }

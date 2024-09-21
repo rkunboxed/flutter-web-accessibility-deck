@@ -12,7 +12,7 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
           configuration: const FlutterDeckSlideConfiguration(
             route: '/where-to-start',
             title: 'Where to Start',
-            steps: 5,
+            steps: 6,
             speakerNotes: _speakerNotes,
             footer: FlutterDeckFooterConfiguration(showFooter: false),
           ),
@@ -23,11 +23,11 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
     return FlutterDeckSlide.split(
       theme: FlutterDeckTheme.of(context).copyWith(
         splitSlideTheme: const FlutterDeckSplitSlideThemeData(
-          rightBackgroundColor: Colors.black,
+          rightBackgroundColor: Color(0xff101417),
         ),
       ),
       leftBuilder: (context) => Padding(
-        padding: const EdgeInsets.all(35),
+        padding: const EdgeInsets.only(top: 35, right: 35, left: 80),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -48,7 +48,8 @@ class WhereToStartSlide extends FlutterDeckSlideWidget {
                 items: const [
                   'Handles text scaling',
                   'Has tappable target sizes',
-                  'Uses sufficient contrast ratios',
+                  'Uses sufficient color contrast ratios',
+                  'Does not use color alone to convey meaning',
                   'Works with keyboard',
                   'Works with screen reader',
                 ],
